@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hetarth Parikh | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+  <!-- AOS scroll animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- Devicon CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="index.html" class="logo">Hetarth Parikh</a>
+
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="#experience">Experience</a>
+      <a href="education.html">Education</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1><span class="highlight">Hi, I'm Hetarth Parikh</span> 👋</h1>
+      <p class="justify-text">I'm a CS Student @ McMaster University with a strong passion in software engineering, Artificial Intelligence, and building meaningful projects with a real-world impact.</p>
+
+      <div class="social-icons">
+        <a href="https://github.com/HetarthP" target="_blank" aria-label="GitHub">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/hetarthparikh" target="_blank" aria-label="LinkedIn">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn">Contact Me</a>
+        <a href="resume.html" class="btn btn-outline">View Resume</a>
+        <p class="typing-effect">Software Engineering | AI Enthusiast | Problem Solver</p>
+      </div>
+      <br>
+
+      <div class="skills-wrapper" data-aos="fade-up">
+        <label for="skill-select">My Skills:</label>
+<select id="skill-select" onchange="
+  document.querySelectorAll('.skill-category').forEach(c => c.style.display = 'none');
+  const selected = document.getElementById(this.value);
+  selected.style.display = 'grid';
+">
+          <option value="fullstack">Fullstack</option>
+          <option value="frontend">Frontend</option>
+          <option value="backend">Backend</option>
+          <option value="ml">Machine Learning</option>
+          <option value="ai">AI</option>
+          <option value="databases">Databses and Auth Tools</option>
+        </select>
+
+        <div id="fullstack" class="skill-category">
+          <span class="skill-pill"><i class="devicon-react-original"></i> React</span>
+          <span class="skill-pill"><i class="devicon-nextjs-original"></i> Next.js</span>
+          <span class="skill-pill"><i class="devicon-nodejs-plain"></i> Node.js</span>
+          <span class="skill-pill"><i class="devicon-express-original"></i> Express.js</span>
+          <span class="skill-pill"><i class="devicon-spring-original"></i> Spring Boot</span>
+          <span class="skill-pill"><i class="devicon-tailwindcss-plain"></i> Tailwind CSS</span>
+          <span class="skill-pill"><i class="devicon-supabase-plain"></i> Supabase</span>
+          <span class="skill-pill">JWT Auth</span>
+          <span class="skill-pill">Zustand</span>
+          <span class="skill-pill">Lucide React</span>
+          <span class="skill-pill"><i class="devicon-framer-plain"></i> Framer Motion</span>
+        </div>
+
+        <div id="frontend" class="skill-category" style="display: none;">
+          <span class="skill-pill"><i class="devicon-html5-plain"></i> HTML</span>
+          <span class="skill-pill"><i class="devicon-css3-plain"></i> CSS</span>
+          <span class="skill-pill"><i class="devicon-javascript-plain"></i> JavaScript</span>
+          <span class="skill-pill"><i class="devicon-react-original"></i> React</span>
+          <span class="skill-pill"><i class="devicon-nextjs-original"></i> Next.js</span>
+          <span class="skill-pill"><i class="devicon-tailwindcss-plain"></i> Tailwind CSS</span>
+          <span class="skill-pill">AOS Animation</span>
+          <span class="skill-pill">Responsive Design</span>
+        </div>
+
+        <div id="backend" class="skill-category" style="display: none;">
+          <span class="skill-pill"><i class="devicon-nodejs-plain"></i> Node.js</span>
+          <span class="skill-pill"><i class="devicon-spring-original"></i> Spring Boot</span>
+          <span class="skill-pill"><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
+          <span class="skill-pill"><i class="devicon-mongodb-plain"></i> MongoDB</span>
+          <span class="skill-pill"><i class="devicon-express-original"></i> Express.js</span>
+          <span class="skill-pill">Spring Security</span>
+          <span class="skill-pill"><i class="devicon-fastapi-plain"></i> FastAPI</span>
+          <span class="skill-pill">JWT Auth</span>
+          <span class="skill-pill">Lombok</span>
+        </div>
+
+        <div id="ml" class="skill-category" style="display: none;">
+          <span class="skill-pill">Scikit-learn</span>
+          <span class="skill-pill"><i class="devicon-pandas-original"></i> Pandas</span>
+          <span class="skill-pill"><i class="devicon-numpy-original"></i> NumPy</span>
+          <span class="skill-pill">XGBoost</span>
+          <span class="skill-pill">Random Forest</span>
+          <span class="skill-pill">Pydantic</span>
+          <span class="skill-pill"><i class="devicon-python-plain"></i> Python</span>
+        </div>
+
+        <div id="ai" class="skill-category" style="display: none;">
+          <span class="skill-pill"><i class="devicon-tensorflow-original"></i> TensorFlow</span>
+          <span class="skill-pill"><i class="devicon-pytorch-original"></i> PyTorch</span>
+          <span class="skill-pill">LangChain</span>
+          <span class="skill-pill"><i class="devicon-openai-original"></i> OpenAI API</span>
+        </div>
+
+        <div id="databases" class="skill-category" style="display: none;">
+          <span class="skill-pill"><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
+          <span class="skill-pill"><i class="devicon-mongodb-plain"></i> MongoDB</span>
+          <span class="skill-pill">H2 Database</span>
+          <span class="skill-pill"><i class="devicon-supabase-plain"></i> Supabase Auth</span>
+          <span class="skill-pill"><i class="devicon-git-plain"></i> Git</span>
+          <span class="skill-pill"><i class="devicon-github-original"></i> GitHub</span>
+          <span class="skill-pill"><i class="devicon-vscode-plain"></i> VS Code</span>
+          <span class="skill-pill"><i class="devicon-netlify-plain"></i> Netlify</span>
+          <span class="skill-pill">Render</span>
+        </div>
+      </div>
+    </div>
+
+    
+
+
+
+
+    <div class="hero-right">
+        <img src="your-photo.jpg" alt="Your Photo" class="bounce-in">
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience-section">
+    <h2 data-aos="fade-up">Work Experience</h2>
+    <div class="experience-card" data-aos="fade-right">
+      <img src="agsys.jpg" alt="Agsys Tech Logo">
+      <div class="experience-details">
+        <h3>Software Engineering Intern @ Agsys Tech</h3>
+        <p><strong>May 2024 – September 2024</strong></p>
+        <p>Worked on backend APIs and helped develop internal tooling for data pipelines. Built performance dashboards and collaborated with the frontend team to improve the UX.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <h2 data-aos="fade-up">Projects</h2>
+
+    <!-- AceAI Section -->
+    <section class="project-card" data-aos="fade-right">
+      <img src="aceai.jpeg" alt="Project Screenshot">
+      <div class="project-info">
+        <h3>AceAI – An AI Study Assistant</h3>
+        <p>AceAI is a full-stack AI-powered learning assistant that transforms how students engage with their study materials. The platform allows users to upload class notes, PDF documents, or textbook excerpts, which are then automatically summarized using advanced NLP techniques. With over 500,000+ words in various notes summarized, AceAI intelligently generates custom multiple-choice quizzes for these notes in under 2 seconds using NLP and flashcards to reinforce understanding and boost retention — all in real-time.</p>
+        <br>
+        <p>Whether you're preparing for exams or just reviewing key concepts, AceAI provides a seamless, efficient, and personalized study experience by leveraging OpenAI's large language models.</p>
+        <br>
+        <p>🧠 Key Features:</p>
+        <br>
+        <p>🔍 Smart Summarization of PDFs, notes, and textbook content</p>
+        <br>
+        <p>❓ Automatic Grading Quiz Generation for active recall and self-assessment with a 97.8% quiz accuracy score using OpenAI</p>
+        <br>
+        <p>🧾 Flashcard Creation based on uploaded material</p>
+        <br>
+        <p>⚡ Real-time interaction with AI — no manual formatting needed</p>
+        <br>
+        <p><strong>Tech Used:</strong> React, Node.js, OpenAI API, Express.js, PDF parsing, Tailwind CSS</p>
+      </div>
+      <div class="project-video-gallery">
+        <video src="aceaivideo.mp4" controls></video>
+      </div>
+    </section>
+
+    <!-- MacMate Section -->
+    <section class="project-card" data-aos="fade-left">
+      <div class="project-info">
+<h3 style="color: #ad013a;">MacMate- Campus Guide and Task Scheduler</h3>
+        <p>MacMate is a full-stack campus companion platform built specifically for McMaster University students. The app helps users navigate campus efficiently and stay on top of their academic workload with two core features:</p>
+        <br>
+        <p>🗓️ Smart Scheduler – Organize and visualize upto 75+ assignments, midterms, and deadlines on a dynamic calendar (React + Spring Boot), with color-coded events, filtering, and completion tracking.</p>
+        <br>
+        <p>📍 Campus Navigator (Coming Soon) – An interactive Google Maps API -powered tool that lets students instantly locate over 25+ key campus spots like gyms, libraries, study spaces, and cafés, with category filters, auto-zoom functionality, and search bar instant relocation.</p>
+        <br>
+        <p><strong>Tech Used:</strong> Google Maps API, Next.js, Tailwind CSS, React Big Calendar, AOS, Lucide React, ShadcnUI, Framer Motion, JWT Handling, Spring Boot, Spring Security, Lombok, H2 DataBase</p>
+        <br>
+        <a href="https://macmate.vercel.app/register" target="_blank" rel="noopener noreferrer" class="demo-button">
+        🔗 Click to go to MacMate!
+        </a>
+        <br>
+        <div style="margin-top: 2rem;">
+  <a href="https://github.com/HetarthP/macmate-scheduler-frontend" target="_blank" rel="noopener noreferrer" class="demo-button">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;">
+  View Source Code
+</a>
+
+</div>
+
+</a>
+
+
+      </div>
+      <div class="project-gallery">
+        <a href="macmatee (1).jpeg" class="lightbox-trigger">
+          <img src="macmatee (1).jpeg" alt="MacMate Screenshot 1">
+        </a>
+        <a href="macmatee (2).jpeg" class="lightbox-trigger">
+          <img src="macmatee (2).jpeg" alt="MacMate Screenshot 2">
+        </a>
+        <a href="maccy.jpeg" class="lightbox-trigger">
+          <img src="maccy.jpeg" alt="MacMate Screenshot 3">
+        </a>
+      </div>
+      <div class="project-video-gallery">
+        <video src="macmatevideo.mp4" controls></video>
+       <video src="mac.mp4" controls></video>
+
+      </div>
+    </section>
+
+    <!-- Symplify Section -->
+        <!-- Symplify Section -->
+    <section class="project-card symplify-card" data-aos="fade-right">
+      <img src="symplify.jpeg" alt="Symplify Screenshot" class="symplify-img">
+      <div class="project-info">
+        <h3>Symplify – Real-Time Health Predictor</h3>
+        <p>Symplify is a real-time health insight web app that helps users identify potential illnesses based on their symptoms. Built on a dataset of over 4,900 real-world symptom-disease relationships, the app supports more than 130 symptoms and returns predictions from 40+ medical conditions. Users can either select symptoms from a dynamic dropdown or enter them manually for a fully personalized experience. Each prediction is accompanied by a confidence score, providing clear insight into how likely the diagnosis is, and offering users transparency around potential overlaps between conditions. With its fast, no-login interface and intuitive UI, Symplify empowers users to make informed decisions and better understand their health from the moment symptoms appear.</p>
+        <br>
+        <p>⚕️ Instant Feedback – With over 1000+ symptom predicitions processed, users receive predictions based on symptoms input in real-time with a focus on accessibility and simplicity.</p>
+        <br>
+        <p>🧠 Powered by ML – The backend uses a trained Random Forest model on a curated health dataset, deployed using FastAPI.</p>
+        <br>
+        <p><strong>Tech Used:</strong> Next.js, Tailwind CSS, FastAPI, Python, Scikit-learn, Random Forest Classifier, CORS, Pydantic</p>
+        <div class="project-video-gallery">
+          <video src="simplify.mp4" controls></video>
+        </div>
+      </div>
+    </section> <!-- END Symplify -->
+
+  </section> <!-- END Projects -->
+
+  <!-- Dormflow Section (Separate Section for Margin & Background) -->
+  <section class="projects-section">
+    <section class="project-card" data-aos="fade-right" style="margin-top: 0.5rem;">
+
+      <div class="project-info">
+        <div class="project-info justify-text">
+
+<h3 style="color: #2dd4bf;">DormFlow – Real-Time Dorm Productivity App</h3>
+<p><strong>DormFlow</strong> is a next-gen productivity web app built for dorm life — designed to reduce distractions, keep roommates aligned, and boost focus through real-time collaboration. Whether you're deep into interview prep or planning a group chore rotation, DormFlow ensures your dorm stays in sync.</p>
+<br>
+<p>🚀 <strong>Real-Time Dorm Sync</strong> – Powered by Supabase Realtime, DormFlow delivers group status and updates with <strong>&lt;250ms latency</strong>, ensuring seamless live collaboration.</p>
+<br>
+<p>🧠 <strong>Pomodoro Focus Sessions</strong> – Use our Solo Session to enter distraction-free study zones with auto status syncing and support for streak-based productivity.</p>
+<br>
+<p>📎 <strong>Pinned Announcements</strong> – Keep essential dorm-wide messages visible to all members 24/7.</p>
+<br>
+<p>🧹 <strong>Chore Assigner + Rotation</strong> – Add chores and instantly assign them randomly across your group with one click. Includes edit, shuffle, and completion tracking.</p>
+<br>
+<p>📦 <strong>Shared Dorm Closet</strong> – Track who has essentials like chargers, vacuums, or speakers. Each item is linked to a member, with real-time status updates on its availability.</p>
+<br>
+<p>👥 <strong>Join Groups by Code</strong> – Simple onboarding with invite codes. DormFlow supports <strong>up to 100,000 users per group</strong> with low-latency sync and automatic presence tracking.</p>
+<br>
+<p>🎯 <strong>Custom Statuses + Usernames</strong> – Choose from pre-set emojis like 🧠 Focusing or 😴 Sleeping, and personalize your in-app identity with any username you prefer!</p>
+<br>
+<p>📈 <strong>Performance</strong> – Optimized with an initial load time under <strong>0.9s</strong> with hydration speed boosted by static pre-rendering and dynamic routing.</p>
+<br>
+<p><strong>Tech Stack:</strong> Next.js, Tailwind CSS, Supabase Auth + Realtime, Zustand (state), Lucide React, AOS, Vercel</p>
+
+      </div>
+
+      <div class="project-gallery" style="gap: 1.5rem;">
+  <a href="loginnew.jpeg" class="lightbox-trigger" style="flex: 1 1 48%; max-width: 48%;">
+    <img src="loginnew.jpeg" alt="Dormflow Screenshot 1">
+  </a>
+  <a href="new.png" class="lightbox-trigger" style="flex: 1 1 48%; max-width: 48%;">
+    <img src="new.png" alt="Dormflow Screenshot 2">
+  </a>
+</div>
+
+
+      <div class="project-video-gallery">
+        <video src="newvideo.mp4" controls></video>
+       
+      </div>
+    </section>
+  </section>
+
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <img src="" alt="">
+  </div>
+</body>
+</html>
