@@ -565,9 +565,10 @@ label[for="skill-select"] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 1.5rem;
-    height: auto; /* let it grow with content */
+    padding: 2rem 1rem;
+    min-height: 100vh; /* 🔥 fills screen, scrolls if needed */
     text-align: center;
+    box-sizing: border-box;
   }
 
   .hero-left, .hero-right {
@@ -629,5 +630,6 @@ label[for="skill-select"] {
     gap: 0.5rem;
   }
 }
+
 
 
